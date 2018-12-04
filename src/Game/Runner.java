@@ -2,6 +2,7 @@ package Game;
 
 import People.Person;
 import Rooms.Room;
+import Rooms.TreasureRoom;
 import Rooms.WinningRoom;
 	
 import java.util.Scanner;
@@ -26,6 +27,10 @@ public class Runner {
 
 
 		//Create a random winning room.
+		int z = (int)(Math.random()*building.length);
+		int a = (int)(Math.random()*building.length);
+		building[z][a] = new WinningRoom(z, a);
+		
 		int x = (int)(Math.random()*building.length);
 		int y = (int)(Math.random()*building.length);
 		building[x][y] = new WinningRoom(x, y);
