@@ -1,5 +1,7 @@
 package Game;
 
+
+
 import People.Person;
 import Rooms.Room;
 import Rooms.TreasureRoom;
@@ -73,10 +75,12 @@ public class Runner {
 				{
 					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
 					map[p.getxLoc()-1][p.getyLoc()].enterRoom(p);
+					System.out.println("You have moved one unit north");
 					return true;
 				}
 				else
 				{
+					System.out.println("You are allowed to move South");
 					return false;
 				}
 			case "e":
@@ -84,10 +88,12 @@ public class Runner {
 				{
 					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
 					map[p.getxLoc()][p.getyLoc() + 1].enterRoom(p);
+					System.out.println("You have moved one unit east");
 					return true;
 				}
 				else
 				{
+					System.out.println("You are allowed to move west");
 					return false;
 				}
 
@@ -96,10 +102,12 @@ public class Runner {
 				{
 					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
 					map[p.getxLoc()+1][p.getyLoc()].enterRoom(p);
+					System.out.println("You have moved one unit south");
 					return true;
 				}
 				else
 				{
+					System.out.println("You are allowed to move north");
 					return false;
 				}
 
@@ -108,10 +116,12 @@ public class Runner {
 				{
 					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
 					map[p.getxLoc()][p.getyLoc()-1].enterRoom(p);
+					System.out.println("You have moved one unit west");
 					return true;
 				}
 				else
 				{
+					System.out.println("You are allowed to move east");
 					return false;
 				}
 			default:
