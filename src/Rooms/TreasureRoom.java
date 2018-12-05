@@ -4,8 +4,8 @@ import Game.Runner;
 import People.Person;
 
 public class TreasureRoom extends Room {
-    public TreasureRoom(int x, int y) {
-        super(x, y);
+    public TreasureRoom(int z, int a) {
+        super(z, a);
 
     }
 
