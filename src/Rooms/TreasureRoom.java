@@ -4,6 +4,7 @@ import Game.Runner;
 import People.Person;
 
 public class TreasureRoom extends Room {
+
     public TreasureRoom(int z, int a) {
         super(z, a);
 
@@ -19,7 +20,15 @@ public class TreasureRoom extends Room {
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
-        System.out.println("You found the Treasure room! Ten points for Gryffindor.");
-        Runner.gameOff();
+       if (validMove>10) {
+            System.out.println("You found the Treasure room! You earned five points because of " + validMove + " attempts.");
+            Runner.gameOff();
+        }
+        else {
+           System.out.println("You found the Treasure room! Congrats You earned ten points because of " + validMove + " attempts.");
+           Runner.gameOff();
+       }
+
     }
 }
+
