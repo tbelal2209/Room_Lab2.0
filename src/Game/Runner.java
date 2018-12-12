@@ -10,7 +10,7 @@ import Rooms.TrapRoom;
 import java.util.Scanner;
 
 public class Runner {
-
+	public static int validMove;
 	private static boolean gameOn = true;
 	
 	public static void main(String[] args)
@@ -33,6 +33,7 @@ public class Runner {
 		int x = (int)(Math.random()*building.length);
 		int y = (int)(Math.random()*building.length);
 		building[x][y] = new TrapRoom(x, y);
+		
 
 		int z = (int)(Math.random()*building.length);
 		int a = (int)(Math.random()*building.length);
@@ -51,8 +52,8 @@ public class Runner {
 			String move = in.nextLine();
 			if(validMove(move, player1, building))
 			{
-				System.out.println("Your coordinates: row = " + player1.getxLoc() + " col = " + player1.getyLoc());
-				
+				System.out.println("Your coordinates: row = " + player1.getxLoc() + " col = " + player1.getyLoc()+" attempt " + validMove);
+				validMove++;
 			}
 			else {
 				System.out.println("Please choose a valid move.");
@@ -138,8 +139,4 @@ public class Runner {
 	{
 		gameOn = false;
 	}
-	
-
-
-}
 
