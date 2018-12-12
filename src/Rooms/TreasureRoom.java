@@ -21,7 +21,7 @@ public class TreasureRoom extends Room {
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
        if (validMove>10) {
-            System.out.println("You found the Treasure room! You earned five points because of " + validMove + " attempts.");
+            System.out.println("You found the Treasure room! You earned five points because of " + validMove + " attempts. Run this program and try to get ten ponts by finding the treasure room with less than 10 attaempts.");
             Runner.gameOff();
         }
         else {
