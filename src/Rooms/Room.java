@@ -5,7 +5,7 @@ import People.Person;
 public class Room {
 	Person occupant;
 	int xLoc,yLoc;
-	
+	public static int validMove;
 	public Room(int x, int y)
 	{
 		xLoc = x;
@@ -18,6 +18,7 @@ public class Room {
 	 */
 	public void enterRoom(Person x)
 	{
+		validMove++;
 		System.out.println("You enter a plain old room");
 		occupant = x;
 		x.setxLoc(this.xLoc);
