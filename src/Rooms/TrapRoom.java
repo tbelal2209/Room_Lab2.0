@@ -3,9 +3,7 @@ package Rooms;
 import Game.Runner;
 import People.Person;
 
-public class TrapRoom extends Room
-{
-
+public class TrapRoom extends Room {
 	public TrapRoom(int x, int y) {
 		super(x, y);
 
