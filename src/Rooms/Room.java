@@ -1,5 +1,5 @@
 package Rooms;
-
+import Game.Board;
 import People.Person;
 
 public class Room {
@@ -35,3 +35,4 @@ public class Room {
 	}
 	
 }
+
