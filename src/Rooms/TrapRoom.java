@@ -16,10 +16,12 @@ public class TrapRoom extends Room {
 	@Override
 	public void enterRoom(Person x) {
 
-		occupant = x;
-		x.setxLoc(this.xLoc);
-		x.setyLoc(this.yLoc);
-		System.out.println("Unfortunately you are in the trapped room.");
+		if (occupant == x) {
+			x.setxLoc(this.xLoc);
+			x.setyLoc(this.yLoc);
+			System.out.println("Unfortunately you are in the trapped room so now you must start over again.");
+			Runner.gameOn();
+		}
 	}
 	
 
